@@ -1,0 +1,51 @@
+test_get_first_part_of_name (__main__.TestExercice) ... FAIL
+test_get_num_char (__main__.TestExercice) ... ok
+test_get_random_sentence (__main__.TestExercice) ... ERROR
+test_is_even_len (__main__.TestExercice) ... FAIL
+
+======================================================================
+ERROR: test_get_random_sentence (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 70, in test_get_random_sentence
+    outputs = [exercice.get_random_sentence(animals, adjectives, fruits) for i in range(10)]
+  File "test_exercice.py", line 70, in <listcomp>
+    outputs = [exercice.get_random_sentence(animals, adjectives, fruits) for i in range(10)]
+  File "/home/runner/work/2021h-ch4-supp-exercices-PinsonX/2021h-ch4-supp-exercices-PinsonX/exercice.py", line 35, in get_random_sentence
+    print("Aujourd'hui, j'ai vu un %s s'emparer d'un panier %s plein de %s" % (animals[random.randrange(0, 3)], adjectives[random.randrange(0, 3)], fruits[random.randrange(0, 3)]))
+IndexError: tuple index out of range
+
+======================================================================
+FAIL: test_get_first_part_of_name (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 62, in test_get_first_part_of_name
+    "Mauvaise extraction du premier prénom."
+AssertionError: Lists differ: ['Marie', 'Louis', 'Pierre'] != ['Bonjour, Marie', 'Bonjour, Louis', 'Bonjour, Pierre']
+
+First differing element 0:
+'Marie'
+'Bonjour, Marie'
+
+- ['Marie', 'Louis', 'Pierre']
++ ['Bonjour, Marie', 'Bonjour, Louis', 'Bonjour, Pierre'] : Mauvaise extraction du premier prénom.
+
+======================================================================
+FAIL: test_is_even_len (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 28, in test_is_even_len
+    "Mauvaise identification de la parité de la longueur de la chaine."
+AssertionError: Lists differ: [None, None, True] != [False, False, True]
+
+First differing element 0:
+None
+False
+
+- [None, None, True]
++ [False, False, True] : Mauvaise identification de la parité de la longueur de la chaine.
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=2, errors=1)
